@@ -1,0 +1,129 @@
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        Apache-Coyote/1.1
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /solr/select/?q=*&version=2.2&start=0&rows=20&indent=on
+Document Length:        93141 bytes
+
+Concurrency Level:      2
+Time taken for tests:   0.187 seconds
+Complete requests:      10
+Failed requests:        0
+Write errors:           0
+Total transferred:      933650 bytes
+HTML transferred:       931410 bytes
+Requests per second:    53.51 [#/sec] (mean)
+Time per request:       37.375 [ms] (mean)
+Time per request:       18.688 [ms] (mean, across all concurrent requests)
+Transfer rate:          4879.02 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.3      0       1
+Processing:    15   37  13.7     41      55
+Waiting:        3   20  12.8     18      48
+Total:         15   37  13.8     41      55
+
+Percentage of the requests served within a certain time (ms)
+  50%     41
+  66%     45
+  75%     48
+  80%     52
+  90%     55
+  95%     55
+  98%     55
+  99%     55
+ 100%     55 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        Apache-Coyote/1.1
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /solr/select/?q=*&version=2.2&start=0&rows=20&indent=on
+Document Length:        93141 bytes
+
+Concurrency Level:      2
+Time taken for tests:   0.158 seconds
+Complete requests:      10
+Failed requests:        0
+Write errors:           0
+Total transferred:      933650 bytes
+HTML transferred:       931410 bytes
+Requests per second:    63.32 [#/sec] (mean)
+Time per request:       31.585 [ms] (mean)
+Time per request:       15.793 [ms] (mean, across all concurrent requests)
+Transfer rate:          5773.38 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:    15   31   9.8     35      44
+Waiting:        3   16   9.1     16      34
+Total:         15   31   9.8     35      44
+
+Percentage of the requests served within a certain time (ms)
+  50%     35
+  66%     35
+  75%     39
+  80%     40
+  90%     44
+  95%     44
+  98%     44
+  99%     44
+ 100%     44 (longest request)
+This is ApacheBench, Version 2.3 <$Revision: 655654 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient).....done
+
+
+Server Software:        Apache-Coyote/1.1
+Server Hostname:        localhost
+Server Port:            8080
+
+Document Path:          /solr/select/?q=*&version=2.2&start=0&rows=20&indent=on
+Document Length:        93141 bytes
+
+Concurrency Level:      2
+Time taken for tests:   0.150 seconds
+Complete requests:      10
+Failed requests:        0
+Write errors:           0
+Total transferred:      933650 bytes
+HTML transferred:       931410 bytes
+Requests per second:    66.88 [#/sec] (mean)
+Time per request:       29.903 [ms] (mean)
+Time per request:       14.952 [ms] (mean, across all concurrent requests)
+Transfer rate:          6098.13 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0    0   0.0      0       0
+Processing:    17   30   7.5     31      39
+Waiting:        4   11   5.5     14      18
+Total:         17   30   7.5     31      39
+
+Percentage of the requests served within a certain time (ms)
+  50%     31
+  66%     36
+  75%     36
+  80%     38
+  90%     39
+  95%     39
+  98%     39
+  99%     39
+ 100%     39 (longest request)

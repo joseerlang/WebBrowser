@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+<title>Run tests</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<script type="text/javascript">
+<!--
+function rows(url) {
+var lines;
+var TA=document.form1.textarea1.value;
+if(document.all) { // IE
+lines=TA.split("\r\n");
+}
+else { //Mozilla
+lines=TA.split("\n");
+}
+var urlOutput=url;
+for(var i=0; i<lines.length; i++){
+var texto = lines[i].split(":");
+urlOutput += texto[1]+'&';
+}
+window.location = encodeURI(urlOutput.substring(0,urlOutput.length-1));
+}
+//-->
+</script>
+
+</head>
+<body>
+<form action="#" name="form1">
+<div>
+<textarea rows="50" cols="100" name="textarea1"></textarea><br/>
+<button type="button" onclick="rows('http://'+window.location.host+'/WebBrowser/testClientsideA.html?');">Run testA Client</button>
+<button type="button" onclick="rows('http://'+window.location.host+'/WebBrowser/testServersideA.html?');">Run testA Server</button>
+<button type="button" onclick="rows('http://'+window.location.host+'/WebBrowser/testClientsideB.html?');">Run testB Client</button>
+<button type="button" onclick="rows('http://'+window.location.host+'/WebBrowser/testServersideB.html?');">Run testB Server</button>
+<button type="button" onclick="rows('http://'+window.location.host+'/WebBrowser/testClientsideC.html?');">Run testC Client</button>
+<button type="button" onclick="rows('http://'+window.location.host+'/WebBrowser/testServersideC.html?');">Run testC Server</button>
+</div>
+</form>
+</body>
+</html>

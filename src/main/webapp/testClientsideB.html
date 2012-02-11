@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
+                    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<style type="text/css">
+		body { font-family: Arial, sans; font-size: 0.8em}
+	</style> 
+<script src="src/util/util.js"/></script>
+<script src="src/util/v8_benchmark_uitest.js"/></script>
+<script src="lib/jquery/jquery-1.2.6.js"></script>
+	<script src="src/core/Core.js"></script>
+	<script src="src/core/QueryItem.js"></script>
+	<script src="src/core/Manager.js"></script>
+	<script src="src/core/AbstractWidget.js"></script>
+	<script src="src/core/AbstractServerSideWidget.js"></script>
+	<script src="src/core/AbstractClientSideWidget.js"></script>
+	<script src="src/clientside/ExtensibleResultWidget.js"/></script>
+	<script>
+	  var $sj = jQuery.noConflict();
+	</script>  
+  
+
+  <script>
+    var solrjsManager;
+	  $sj(document).ready(function(){
+		solrjsManager = new $sj.solrjs.Manager({solrUrl:"http://"+window.location.host+"/solr/select",QUERY_ALL:"html:"+getQuerystring()});
+	    // a custom result widget      
+      var resultWidget = new $sj.solrjs.ExtensibleResultWidget({
+        id:"result", 
+        target:"#result", 
+        rows:20,
+        renderResult : function(data, pageSize, offset,highlighting) { 
+		  console.time("profile");
+    	  var container = jQuery("<div/>");
+          var docs= data.response.docs;
+          var hl= data.highlighting;
+          $sj.each(docs, function(i, item) {
+            var id= item["id"];
+            jQuery("<h3/>").html(id).appendTo(container);
+            jQuery("<div/>").html(hl[id]["html"][0]).appendTo(container);
+            jQuery("<hr/>").appendTo(container);
+          });
+          container.appendTo(this.target);
+          console.timeEnd("profile"); 
+        }
+      });     
+
+      solrjsManager.addWidget(resultWidget);  	
+			solrjsManager.doRequestAll(); 
+		});
+		automation.SetDone();
+	</script>
+</head>
+<body>
+  <div id="result" style="margin-left:300px;"></div>
+</body>
+</html>
